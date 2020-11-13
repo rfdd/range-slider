@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;1,900&display=swap');
+
+body {
+color: #000;
+font-family: 'Rubik', sans-serif;
+background: #FC466B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+    font-family: 'Rubik',  sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  color:#fff;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+input[type=text] {
+  font-family: 'Rubik', sans-serif;
+  color:#5e5e5e;
+  margin-top: 10px;
+  border: 1px solid black;
+  padding: 15px 10px;
+  width: 110px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+input[type="range"] {
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+ 
+}
+
+/*Chrome*/
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        input[type='range'] {
+          overflow: hidden;
+          width: 100%;
+          -webkit-appearance: none;
+          background-color: #d3d3d3;
+        }
+        
+        input[type='range']::-webkit-slider-runnable-track {
+          height: 25px; /* Specified height */
+          -webkit-appearance: none;
+          color: #13bba4;
+          margin-top: -1px;
+        }
+        
+        input[type='range']::-webkit-slider-thumb {
+           width: 25px; /* Set a specific slider handle width */
+          -webkit-appearance: none;
+          height: 25px; /* Specified height */
+          cursor: ew-resize;
+          background: #434343;
+          box-shadow: -100vw 0 0 100vw  #3F5EFB;
+        }
+    
+    
+    /** FF*/
+    input[type="range"]::-moz-range-progress {
+      background-color: #3F5EFB; 
+      box-shadow: -100vw 0 0 100vw  #3F5EFB;
+    }
+    input[type="range"]::-moz-range-track {  
+      background-color: #d3d3d3;
+    }
+    /* IE*/
+    input[type="range"]::-ms-fill-lower {
+      background-color: #3F5EFB; 
+    }
+    input[type="range"]::-ms-fill-upper {  
+      background-color: #d3d3d3;
+    }    
