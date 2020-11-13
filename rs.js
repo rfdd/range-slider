@@ -15,42 +15,21 @@ function calc(n){
 function format(s){
   return nf.format(s).replace(',', "'") // '10'000'
 }
-/**
- * Lower range value
- */
+
 var Lower = 0
 
-/**
- * Upper range value
- */
 var Upper = 100
 
-
-/**
- * Returns true if string is a number
- */
 const isNumber = s => !isNaN(s)
 
-/**
- * Returns true if string is empty
- */
 const isEmpty = s => s.length == 0
 
-/**
- * Returns a number unchanged if it is in the Lower to Upper range.
- * Returns Lower value if the number is less than the Lower value.
- * Returns Upper value if the number is greater than the Upper value.
- */
 const clamp = n => {
   const n1 = Math.max(Lower, n)
   const n2 = Math.min(n1, Upper)
   return n2
 }
 
-/**
- * Update textElem value to rangeElem value
- */
-//
 const rangeHandler = _ => {                 
   const n = rangeElem.value
   const r = calc(n)
@@ -60,14 +39,6 @@ const rangeHandler = _ => {
   resultElem.textContent = f
 }
 
-
-/**
- * Replace textElem with Lower value if it is an empty string
- * Replace textElem with rangeElem value if it's not a number
- * Clamp textElem number to [0, 1000] range
- * Update textElem to clamped value
- * Update rangeElem value
- */
 const textHandler = _ => {
   const s = textElem.value
   const v0 = rangeElem.value
