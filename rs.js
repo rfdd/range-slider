@@ -6,9 +6,9 @@ var resultElem = document.getElementById('result')
 
 var nf = new Intl.NumberFormat();
 
-//const calc = n => n * 1000
+//const calc = n => n * 100
 function calc(n){
-  return n * 1000
+  return n * 100
 }
 
 //const format = s => nf.format(s).replaceAll(',', "'") // '10'000'
